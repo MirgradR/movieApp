@@ -65,6 +65,9 @@ ul li {
 }
 
 .wrapper .movie__main {
+  -webkit-transition: background-image 0.5s ease;
+  -o-transition: background-image 0.5s ease;
+  transition: background-image 0.5s ease;
   background-image: url("../img/back1.png"), url("../img/back2.png");
   background-size: cover;
   background-position: center;
@@ -170,7 +173,7 @@ ul li {
 }
 
 .movie__content .movie__slider button {
-  width: 40px;
+  width: 80px;
   background-color: rgba(70, 66, 66, 0.253);
 }
 
@@ -204,6 +207,11 @@ ul li {
   cursor: pointer;
 }
 
+.movie__content .movie__slider .slider .slider__card img {
+  width: 292px;
+  height: 440px;
+}
+
 .movie__content .movie__slider .slider .slider__card:hover .card__description-hidden {
   -webkit-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -227,6 +235,7 @@ ul li {
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.452);
 }
 
 .movie__content .movie__slider .slider .slider__card .card__description > * {
