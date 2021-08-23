@@ -33,8 +33,7 @@ function getMovies(url) {
        console.log(data.results) 
        showMovies(data.results)
        changePoster(data.results)
-    })
-    
+    }) 
 }
 
 function changePoster(data) {
@@ -47,20 +46,13 @@ function changePoster(data) {
         let title = film.title
         let ratting = film.vote_average
         let overview = film.overview
-        
         arrPoster.push(poster)
         arrTitle.push(title) 
         arrRatting.push(ratting) 
         arrOverview.push(overview)   
-        
     }
-    //console.log(arrTitle)
-    for (let i = 0; i <= arrPoster.length; i++) {
-
+    for (let i = 0; i < arrPoster.length; i++) {
         setTimeout( () => { 
-            // if (i = arrPoster.length) {
-            //     i = 0
-            // }
             movieMain
                 .style.backgroundImage = `
                 url('../img/back1.png'), 
@@ -69,7 +61,7 @@ function changePoster(data) {
             <h2 class="movie-name">${arrTitle[i]}</h2>
             <h4 class="movie-rating ${getColor(arrRatting[i])}">${arrRatting[i]}</h4>
             <p class="movie-description">${arrOverview[i]} </p>`
-        }, (i+1) * 5000)
+        }, (i+1) * 5000)     
     }
 }
 
